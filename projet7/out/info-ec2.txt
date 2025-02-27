@@ -1,0 +1,2 @@
+PRIVATE_IP : 10.31.2.52 ; AZ : us-east-1b ; PUBLIC_IP : 18.215.238.246
+PRIVATE_IP : 10.31.101.34 ; AZ : us-east-1a ; PUBLIC_IP : 
