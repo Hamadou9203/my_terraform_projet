@@ -43,6 +43,12 @@ module "vpc" {
     net_vpc = local.net_vpc
     projet_tags = local.projet_tags
 }
+
+module "rds" {
+  source = "../modules/rds_modules"
+  group_subnet = [module.list_subnet.private_1_sortie_id, module.list_subnet.private_2_sortie_id]
+  secur_group = [ module.sg.sortie_sg_id ]
+}
 resource "aws_route_table_association" "route_public_1" {
     subnet_id =module.list_subnet.public_1_sortie_id
     route_table_id = module.vpc.route_public_table_id
